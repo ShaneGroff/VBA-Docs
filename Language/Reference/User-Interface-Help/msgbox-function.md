@@ -60,7 +60,7 @@ The _buttons_ [argument](../../Glossary/vbe-glossary.md#argument) settings are:
 
 <br/>
 
-The first group of values (0-5) describes the number and type of buttons displayed in the dialog box; the second group (16, 32, 48, 64) describes the icon style; the third group (0, 256, 512) determines which button is the default; and the fourth group (0, 4096) determines the modality of the message box. When adding numbers to create a final value for the _buttons_ argument, use only one number from each group.
+The first group of values (0-5) describes the number and type of buttons displayed in the dialog box; the second group (16, 32, 48, 64) describes the icon style; the third group (0, 256, 512) determines which button is the default; and the fourth group (0, 4096) determines the modality of the message box. When combining numbers to create a final value for the _buttons_ argument, use only one number from each group.
 
 > [!NOTE] 
 > These [constants](../../Glossary/vbe-glossary.md#constant) are specified by Visual Basic for Applications. As a result, the names can be used anywhere in your code in place of the actual values.
@@ -95,7 +95,7 @@ This example uses the **MsgBox** function to display a critical-error message in
 ```vb
 Dim Msg, Style, Title, Help, Ctxt, Response, MyString
 Msg = "Do you want to continue ?"    ' Define message.
-Style = vbYesNo + vbCritical + vbDefaultButton2    ' Define buttons.
+Style = vbYesNo Or vbCritical Or vbDefaultButton2    ' Define buttons.
 Title = "MsgBox Demonstration"    ' Define title.
 Help = "DEMO.HLP"    ' Define Help file.
 Ctxt = 1000    ' Define topic context. 
